@@ -2,7 +2,7 @@ from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication, QMainWindow
 import sys
 import pandas as pd
-from Form import Ui_MainWindow
+from form import Ui_MainWindow
 
 class App(QtWidgets.QMainWindow):
     def __init__(self):
@@ -12,11 +12,18 @@ class App(QtWidgets.QMainWindow):
         self.df = pd.read_csv("worldometer_data.csv")
 
     def Country(self):
-        selam = self.df["Country/Region"]
-        print(selam)
-        for i in selam:
+        Countrys = self.df["Country/Region"]
+        for i in Countrys:
             self.ui.comboBox.addItem(i)
-            
+        self.ui.pushButton.clicked.connect(self.on_clicked)
+        
+    def on_clicked(self):
+        MyCountry = self.ui.comboBox.currentText()
+        MC = self.df[self.df["Country/Region"] == MyCountry]
+        MyCountry = str(MC["TotalDeaths"])
+        self.ui.label_2.setText(MyCountry)
+
+
 def myAPP():
     myAPP = QtWidgets.QApplication(sys.argv)
     win = App()

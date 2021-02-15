@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'MainWindow.ui'
+# Form implementation generated from reading ui file 'form.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.2
 #
@@ -14,33 +14,25 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(395, 308)
-        font = QtGui.QFont()
-        font.setFamily("Mistral")
-        MainWindow.setFont(font)
+        MainWindow.resize(288, 185)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.gridLayout_2 = QtWidgets.QGridLayout(self.centralwidget)
-        self.gridLayout_2.setObjectName("gridLayout_2")
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        font = QtGui.QFont()
-        font.setFamily("Mistral")
-        font.setPointSize(16)
-        self.label.setFont(font)
-        self.label.setObjectName("label")
-        self.gridLayout_2.addWidget(self.label, 0, 0, 2, 2)
-        self.comboBox = QtWidgets.QComboBox(self.centralwidget)
-        self.comboBox.setObjectName("comboBox")
-        self.gridLayout_2.addWidget(self.comboBox, 1, 1, 1, 1)
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        font = QtGui.QFont()
-        font.setPointSize(11)
-        self.pushButton.setFont(font)
+        self.pushButton.setGeometry(QtCore.QRect(90, 70, 93, 28))
         self.pushButton.setObjectName("pushButton")
-        self.gridLayout_2.addWidget(self.pushButton, 2, 0, 1, 2)
-        self.listView = QtWidgets.QListView(self.centralwidget)
-        self.listView.setObjectName("listView")
-        self.gridLayout_2.addWidget(self.listView, 3, 0, 1, 2)
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(40, 40, 101, 21))
+        self.label.setObjectName("label")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(120, 110, 81, 16))
+        self.label_2.setText("")
+        self.label_2.setObjectName("label_2")
+        self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        self.label_3.setGeometry(QtCore.QRect(40, 110, 81, 21))
+        self.label_3.setObjectName("label_3")
+        self.comboBox = QtWidgets.QComboBox(self.centralwidget)
+        self.comboBox.setGeometry(QtCore.QRect(160, 40, 101, 21))
+        self.comboBox.setObjectName("comboBox")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -51,9 +43,10 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Covid-19"))
-        self.label.setText(_translate("MainWindow", "<html><head/><body><p>Select a Country</p></body></html>"))
-        self.pushButton.setText(_translate("MainWindow", "Push"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.pushButton.setText(_translate("MainWindow", "Show "))
+        self.label.setText(_translate("MainWindow", "Select a Country"))
+        self.label_3.setText(_translate("MainWindow", "Total Death"))
 
 
 if __name__ == "__main__":
