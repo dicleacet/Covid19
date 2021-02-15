@@ -19,8 +19,8 @@ class App(QtWidgets.QMainWindow):
         
     def on_clicked(self):
         MyCountry = self.ui.comboBox.currentText()
-        MC = self.df[self.df["Country/Region"] == MyCountry]
-        MyCountry = str(MC["TotalDeaths"])
+        MC = self.df[self.df["Country/Region"] == MyCountry] ["TotalDeaths"].iloc[0]
+        MyCountry = str(int(MC))
         self.ui.label_2.setText(MyCountry)
 
 
